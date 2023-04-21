@@ -1,0 +1,56 @@
+2023-04-18T11:00:10+00:00 CRITICAL Declaration of TL_Drone_Shipping_Method::calculate_shipping($package) must be compatible with WC_Shipping_Method::calculate_shipping($package = []) in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/tl-shipping-method/tl-shipping-method.php on line 57
+
+2023-04-18T11:55:53+00:00 CRITICAL Uncaught Error: Call to a member function get_instance_option_key() on bool in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:3029
+Stack trace:
+#0 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(308): WC_AJAX::shipping_zone_methods_save_changes('')
+#1 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-admin/admin-ajax.php(188): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php on line 3029
+
+2023-04-18T11:57:15+00:00 CRITICAL Uncaught Error: Call to a member function get_instance_option_key() on bool in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:3029
+Stack trace:
+#0 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(308): WC_AJAX::shipping_zone_methods_save_changes('')
+#1 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-admin/admin-ajax.php(188): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php on line 3029
+
+2023-04-18T11:58:45+00:00 CRITICAL Uncaught Error: Call to a member function get_instance_option_key() on bool in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:3029
+Stack trace:
+#0 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(308): WC_AJAX::shipping_zone_methods_save_changes('')
+#1 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-admin/admin-ajax.php(188): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php on line 3029
+
+2023-04-18T12:04:49+00:00 CRITICAL Uncaught Error: Call to a member function get_instance_option_key() on bool in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:3029
+Stack trace:
+#0 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(308): WC_AJAX::shipping_zone_methods_save_changes('')
+#1 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-admin/admin-ajax.php(188): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php on line 3029
+
+2023-04-18T12:10:47+00:00 CRITICAL Uncaught Error: Call to a member function get_instance_option_key() on bool in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:3029
+Stack trace:
+#0 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(308): WC_AJAX::shipping_zone_methods_save_changes('')
+#1 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-admin/admin-ajax.php(188): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php on line 3029
+
+2023-04-18T12:10:53+00:00 CRITICAL Uncaught Error: Call to a member function get_instance_option_key() on bool in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:3029
+Stack trace:
+#0 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(308): WC_AJAX::shipping_zone_methods_save_changes('')
+#1 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-admin/admin-ajax.php(188): do_action('wp_ajax_woocomm...')
+#4 {main}
+  thrown in /Users/thereselinden/Desktop/Medieinstitutet/Systemvetenskap/PHP/eHandelPlattform_kurs/inlamningsuppgift_2/wordpress/wp-content/plugins/woocommerce/includes/class-wc-ajax.php on line 3029
+

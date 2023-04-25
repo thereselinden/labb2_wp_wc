@@ -18,7 +18,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     if (!class_exists('WC_TL_Shipping_Method')) {
       class WC_TL_Shipping_Method extends WC_Shipping_Method
       {
-        public $cost;
+        public $min_amount = 0;
+        public $title_free;
+
         /**
          * Constructor for your shipping class
          *
@@ -31,7 +33,6 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
           $this->instance_id        = absint($instance_id);
           $this->method_title       = __('Therese Shipping Method'); // title shown in admin
           $this->method_description = __('Description of Thereses shipping method'); // description shown in admin
-
           $this->supports           = array(
             'shipping-zones',
             'instance-settings',
@@ -39,7 +40,6 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
             // 'settings', // Slår på en extra sida i shipping fliken 
           );
 
-          $this->cost = 0;
           $this->init();
         }
 
@@ -53,15 +53,17 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
         function init()
         {
           // Load the settings API
-          $this->init_form_fields(); // This is part of the settings API. Override the method to add your own settings
           $this->init_instance_form_settings();
           $this->init_settings(); // This is part of the settings API. Loads settings you previously init.
 
           // user defined values goes here, not in construct 
-          $this->enabled = $this->get_option('enabled');
-          $this->title   = $this->get_option('title');
-          $this->cost = $this->get_option('cost');
-          $this->tax_status = $this->get_option('tax_status');
+          $this->enabled            = $this->get_option('enabled');
+          $this->title              = $this->get_option('title');
+          //$this->cost = $this->get_option('cost');
+          $this->title_free         = $this->get_option('title_free');
+          $this->cost               = $this->get_option('cost', 0);
+          $this->min_amount         = $this->get_option('min_amount', 0);
+          $this->tax_status         = $this->get_option('tax_status');
 
 
           // Save settings in admin if you have any defined
@@ -80,6 +82,12 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
               'description' => __('This controls the title which the user sees during checkout.', 'woocommerce'),
               'default' => __('Express', 'woocommerce'),
               'desc_tip'    => true, // gives question mark with description text on hover next to title admin view
+            ),
+            'title_free' => array(
+              'title' => __('Title', 'woocommerce'),
+              'type' => 'text',
+              'description' => __('The title which the user sees when free shipping amount is reached.', 'woocommerce'),
+              'default' => __('Free shipping', 'woocommerce')
             ),
             'description' => array(
               'title' => __('Description', 'woocommerce'),
@@ -106,6 +114,12 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
               'default'     => 0,
               'desc_tip'    => true,
             ),
+            'min_amount' => array(
+              'title' => __('Minimum amount free shipping', 'woocommerce'),
+              'type' => 'number',
+              'description' => __('This controls the minimum amount for free shipping', 'woocommerce'),
+              'default' => '0'
+            )
           );
         } // End instance_init_form_fields()
 
@@ -118,10 +132,14 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
          */
         public function calculate_shipping($package = array())
         {
+          $total = WC()->cart->get_displayed_subtotal();
+          $cost = $total > $this->min_amount ? 0 : $this->get_option('cost');
+          $label = $cost === 0 ? __($this->title_free, "Woocommerce") : __($this->title, "Woocommerce");
+
 
           $rate = array(
-            'label' => $this->title,
-            'cost' =>  $this->cost,
+            'label' => $label,
+            'cost' => $cost,
             'package' => $package,
           );
           $this->add_rate($rate);
